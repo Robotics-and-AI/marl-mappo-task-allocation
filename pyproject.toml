@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marl-mappo-task-allocation"
+version = "0.1.0"
+description = "MAPPO-style multi-agent task allocation for heterogeneous human-robot teams."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Corluc" }
+]
+keywords = [
+  "multi-agent reinforcement learning",
+  "MAPPO",
+  "RLlib",
+  "task allocation",
+  "human-robot teams",
+  "centralized training decentralized execution"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "numpy",
+  "tabulate",
+  "PyYAML",
+  "gymnasium",
+  "torch",
+  "ray[rllib]",
+  "sentence-transformers"
+]
+
+[project.optional-dependencies]
+gui = ["PySide6"]
+all = ["PySide6"]
+
+[project.urls]
+Homepage = "https://github.com/<your-github-username>/marl-mappo-task-allocation"
+Repository = "https://github.com/<your-github-username>/marl-mappo-task-allocation"
+Issues = "https://github.com/<your-github-username>/marl-mappo-task-allocation/issues"
+
+[tool.setuptools]
+py-modules = [
+  "task_generator",
+  "heterogeneous_team_env",
+  "make_dataset",
+  "extract_eval_only_npz",
+  "train",
+  "task_allocation_interface"
+]
+packages = ["task_templates"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+task_templates = ["*.yaml"]
