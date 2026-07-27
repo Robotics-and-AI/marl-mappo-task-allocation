@@ -406,14 +406,17 @@ exported_checkpoints/best_checkpoint
 
 ## License
 
-Choose a license before publishing. A MIT license template is included as:
+This project is released under the MIT License. See `LICENSE` for details.
 
-```text
-LICENSE_TEMPLATE_MIT.txt
-```
+## Citation
 
-If you choose MIT, review the template, fill in the copyright information, and rename it to:
+If you use this package, the task-template dataset, or the generated evaluation datasets in academic work, please cite the software repository.
 
-```text
-LICENSE
+```bibtex
+@misc{marl_mappo_task_allocation_2026,
+  title        = {marl-mappo-task-allocation: MAPPO-Based Task Allocation for Heterogeneous Human-Robot Teams},
+  author       = {Francisco Cruz},
+  year         = {2026},
+  howpublished = {\url{https://github.com/Robotics-and-AI/marl-mappo-task-allocation/}}
+}
 ```
