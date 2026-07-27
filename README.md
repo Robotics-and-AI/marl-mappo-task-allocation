@@ -4,7 +4,6 @@ MAPPO-based task allocation framework for heterogeneous human-robot teams using 
 
 This repository contains a multi-agent reinforcement learning environment built with RLlib PPO in a MAPPO-style centralized-training/decentralized-execution (CTDE) setup. Agents receive natural-language task instructions, submit discrete bids, and the environment assigns the task to the lowest eligible bidder according to capability constraints.
 
-The public repository/distribution name is `marl-mappo-task-allocation`. Python imports remain root-level module imports such as `task_generator`, `heterogeneous_team_env`, and `train`, because hyphens are not valid in Python import identifiers.
 
 ## Main features
 
