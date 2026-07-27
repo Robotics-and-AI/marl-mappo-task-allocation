@@ -71,7 +71,7 @@ marl-mappo-task-allocation/
 Each task is represented by a natural-language instruction and a requirement vector:
 
 ```text
-[mobility_class, manipulation_class, payload_class]
+(mobility_level, manipulation_level, payload_level)
 ```
 
 Each agent has a fixed capability vector in the same order. An agent is eligible for a task when all capability dimensions satisfy:
@@ -80,7 +80,7 @@ Each agent has a fixed capability vector in the same order. An agent is eligible
 agent_capability >= task_requirement
 ```
 
-At each environment step, all agents receive the task instruction and submit a discrete bid from `0` to `10`. A bid of `0` means abstain. Among eligible non-zero bidders, the environment selects the lowest bid as the winner.
+At each environment step, all agents receive the task instruction and submit a discrete bid from `0` to `10`. A bid of `0` means that the agent chooses not to participate. Among eligible non-zero bidders, the environment selects the lowest bid as the winner.
 
 The actor receives local information: the agent capability vector and the task embedding. The centralized critic receives a global state containing all agent capabilities, the task embedding, and eligibility flags.
 
@@ -88,12 +88,12 @@ The actor receives local information: the agent capability vector and the task e
 
 | Agent ID | Agent type | Capability vector `[mobility, manipulation, payload]` |
 |---:|---|---|
-| 0 | Mobile Robot | `[2, 1, 4]` |
-| 1 | Mobile Manipulator | `[3, 4, 3]` |
-| 2 | Legged Robot | `[4, 1, 1]` |
-| 3 | Robotic Arm 1 | `[1, 3, 2]` |
-| 4 | Robotic Arm 2 | `[1, 2, 1]` |
-| 5 | Human | `[4, 4, 3]` |
+| 0 | Mobile Robot | `(2, 1, 4)` |
+| 1 | Mobile Manipulator | `(3, 4, 3)` |
+| 2 | Legged Robot | `(4, 1, 1)` |
+| 3 | Robotic Arm 1 | `(1, 3, 2)` |
+| 4 | Robotic Arm 2 | `(1, 2, 1)` |
+| 5 | Human | `(4, 4, 3)` |
 
 ## Requirement classes
 
