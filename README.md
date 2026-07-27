@@ -86,7 +86,7 @@ The actor receives local information: the agent capability vector and the task e
 
 ## Team capabilities
 
-| Agent ID | Agent type | Capability vector `[mobility, manipulation, payload]` |
+| Agent ID | Agent type | Capability vector `(mobility, manipulation, payload)` |
 |---:|---|---|
 | 0 | Mobile Robot | `(2, 1, 4)` |
 | 1 | Mobile Manipulator | `(3, 4, 3)` |
